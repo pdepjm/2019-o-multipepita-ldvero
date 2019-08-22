@@ -4,7 +4,11 @@ object pepita {
 	method estaCansada() {
 		return energia < 50
 	}
-
+	
+	method estaFeliz() {
+		return energia.between(500, 1000)
+	}
+	
 	method vola(kms) {
 		energia -= 10 + kms
 	}
@@ -12,6 +16,17 @@ object pepita {
 	method come(comida) {
 		energia = energia + comida.energiaQueOtorga()
 	}
+	
+	method cuantoQuiereVolar(){
+		var base = energia / 5
+		if(energia. between(300, 400)){
+			base += 10
+		}
+		if(energia%20 == 0){
+			base += 15
+			}
+			return base	
+		} 
 }
 
 object alpiste {
